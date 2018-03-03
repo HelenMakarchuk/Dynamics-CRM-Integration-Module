@@ -1,0 +1,837 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    min-height: calc(100vh - 50px);
+}
+
+.dialog-Title {
+    font-weight: Lighter;
+    font-size: 23px;
+    font-family: Segoe UI Light, Segoe UI, Tahoma, Arial;
+    color: #262626;
+    display: inline-block;
+    margin-left: 24px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    max-width: calc(100vw - 48px);
+    margin-right: 24px;
+    float: left;
+    clear: both;
+}
+
+.footer {
+    height: 50px;
+    background-color: #e9ebef;
+    border-top-color: #FFFFFF;
+    cursor: default;
+    clear: both;
+}
+
+.btn_footer {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    margin-top: 12px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+}
+
+#btnCancel {
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+#btnSave {
+    margin-left: calc(100vw - 263.5px);
+    float: left;
+}
+
+.btnSourceConnection {
+    height: 21px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #f2f4f7;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    margin-left: 15px;
+    padding-bottom: 1px;
+}
+
+#btnDBConnectionStr {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    float: left;
+    margin-left: 24px;
+    margin-bottom: 20px;
+}
+
+#btnDBConnectionGenStr {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#btnRabbitConnectionUri {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    float: left;
+    margin-left: 24px;
+    margin-bottom: 20px;
+}
+
+#btnRabbitConnectionParams {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#btnDBConnectionWinAuth {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #e9ebef;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    float: left;
+    margin-left: 24px;
+    clear: both;
+    border-color: #bcbcc5;
+}
+
+#btnDBConnectionSqlAuth {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 80px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #e9ebef;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-color: #bcbcc5;
+}
+
+#configuration_point_list {
+    max-width: calc(100vw - 65px);
+    width: 402px;
+}
+
+#entity_list {
+    max-width: calc(100vw - 257.8px);
+}
+
+#operation_list {
+    max-width: calc(100vw - 257.8px);
+}
+
+#execute_plugin_list {
+    max-width: calc(100vw - 257.8px);
+    width: 292px;
+}
+
+#source_list {
+    max-width: calc(100vw - 258px);
+}
+
+.db_name_list {
+    max-width: calc(100vw - 258px);
+    width: 293.9px;
+}
+
+#db_table_name_list {
+    max-width: calc(100vw - 258px);
+    width: 293.9px;
+}
+
+#db_table_name_list {
+    max-width: calc(100vw - 258px);
+    width: 293.9px;
+}
+
+.list {
+    border: 1px solid #CCCCCC;
+    font-family: Segoe UI, Arial, sans-serif;
+    background-color: white;
+    padding: 0px 10px 1px 2px;
+    font-size: 12px;
+}
+
+.input {
+    border: 1px solid #CCCCCC;
+    font-family: Segoe UI, Arial, sans-serif;
+    background-color: white;
+    font-size: 12px;
+    padding: 1px 0px 2px 6px;
+}
+
+.div-field {
+    float: left;
+    clear: both;
+    margin-left: 24px;
+}
+
+#configuration_point_field {
+    margin-bottom: 20px;
+}
+
+hr {
+    clear: both;
+    margin: 0px 15px 0px 15px;
+}
+
+.span {
+    font-family: Segoe\000020UI;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: default;
+    font-style: normal;
+    color: #444444;
+    line-height: 16px;
+    margin-right: 20px;
+}
+
+#entity_span {
+    padding-right: 116.41px;
+}
+
+#operation_span {
+    padding-right: 114px;
+}
+
+#execute_plugin_span {
+    padding-right: 14.5px;
+}
+
+#attributes_execute_operation_span {
+    padding-right: 1.47px;
+}
+
+#source_span {
+    padding-right: 73.3px;
+}
+
+#host_name_span {
+    padding-right: 71px;
+}
+
+#host_login_name_span {
+    padding-right: 30px;
+}
+
+#host_pwd_name_span {
+    padding-right: 26px;
+    margin-right: 17px;
+}
+
+#datasource_name_span {
+    padding-right: 25.3px;
+}
+
+#db_name_span {
+    padding-right: 46px;
+}
+
+#db_table_name_span {
+    padding-right: 0px;
+    margin-right: 15px;
+}
+
+#login_span {
+    padding-right: 58px;
+}
+
+#iservice_name_field #password_span {
+    padding-right: 51.2px;
+}
+
+#service_way_span {
+    padding-right: 66px;
+}
+
+#service_way_example_span {
+    padding-right: 51.2px;
+    margin-left: 194px;
+}
+
+#iservice_name_span {
+    padding-right: 51.2px;
+}
+
+#iservice_name_example_span {
+    padding-right: 51.2px;
+    margin-left: 194px;
+}
+
+#service_function_name_span {
+    padding-right: 77.7px;
+}
+
+#service_function_name_example_span {
+    padding-right: 51.2px;
+    margin-left: 194px;
+}
+
+#rabbit_uri_name_span {
+    margin-left: 2px;
+    margin-right: 60px;
+}
+
+#rabbit_uri_queue_span {
+    margin-left: -21px;
+    margin-right: 39px;
+}
+
+#rabbit_uri_routingkey_span {
+    margin-left: -21px;
+    margin-right: 14px;
+}
+
+#rabbit_params_host_name_span {
+    padding-right: 12px;
+    margin-left: 1px;
+}
+
+#rabbit_params_port_span {
+    padding-right: 46px;
+    margin-left: 1px;
+}
+
+#rabbit_params_virtualhost_name_span {
+    padding-right: 9px;
+    margin-left: 1px;
+}
+
+#rabbit_params_username_span {
+    padding-right: 13px;
+    margin-left: 1px;
+}
+
+#rabbit_params_password_span {
+    padding-right: 18px;
+    margin-left: 1px;
+}
+
+#rabbit_params_queue_span {
+    padding-right: 31px;
+    margin-left: 1.9px;
+}
+
+#rabbit_params_routingkey_span {
+    padding-right: 7.6px;
+    margin-left: 1px;
+}
+
+#execute_test_transfer_status_span {
+    padding-right: 18px;
+    margin-left: 1px;
+    font-size: 14px;
+}
+
+#entity_field {
+    margin-bottom: 15px;
+}
+
+#operation_field {
+    margin-bottom: 15px;
+}
+
+#execute_plugin_field {
+    margin-bottom: 15px;
+}
+
+#attributes_execute_operation_field {
+    margin-bottom: 15px;
+}
+
+#source_field {
+    margin-bottom: 20px;
+}
+
+#host_name_field {
+    margin-bottom: 15px;
+}
+
+#host_login_name_field {
+    margin-bottom: 15px;
+}
+
+#host_pwd_name_field {
+    margin-bottom: 15px;
+}
+
+#db_name_field {
+    margin-bottom: 15px;
+}
+
+#db_table_name_field {
+    margin-bottom: 15px;
+}
+
+#db_table_name_field {
+    margin-bottom: 15px;
+}
+
+#login_field {
+    margin-bottom: 15px;
+}
+
+#password_field {
+    margin-bottom: 20px;
+}
+
+#datasource_name_field {
+    margin-bottom: 15px;
+}
+
+#service_way_field {
+    margin-bottom: 2px;
+}
+
+#service_way_example_field {
+    margin-bottom: 20px;
+}
+
+#iservice_name_field {
+    margin-bottom: 2px;
+}
+
+#iservice_name_example_field {
+    margin-bottom: 20px;
+}
+
+#service_function_name_field {
+    margin-bottom: 2px;
+}
+
+#service_function_name_example_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_uri_name_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_uri_queue_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_uri_routingkey_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_host_name_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_port_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_virtualhost_name_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_username_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_password_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_queue_field {
+    margin-bottom: 15px;
+}
+
+#rabbit_params_routingkey_field {
+    margin-bottom: 15px;
+}
+
+#execute_test_transfer_status_field {
+    margin-bottom: 35px;
+    margin-left: 25px;
+}
+
+.image {
+    cursor: pointer;
+}
+
+#attributes_execute_operation_image {
+    border-top: #c6c6c6 1px solid;
+    border-right: #c6c6c6 1px solid;
+    border-bottom: #c6c6c6 1px solid;
+    padding: 0.25px 0.3435px 0.25px 0.15px;
+}
+
+#attributes_execute_operation_input {
+    max-width: calc(100vw - 278px);
+    width: 296px;
+}
+
+#host_name_input {
+    max-width: calc(100vw - 258px);
+    width: 295px;
+}
+
+#host_login_name_input {
+    max-width: calc(100vw - 258px);
+    width: 295px;
+}
+
+#host_pwd_name_input {
+    max-width: calc(100vw - 258px);
+    width: 295px;
+}
+
+#datasource_name_input {
+    max-width: calc(100vw - 258px);
+    width: 530px;
+}
+
+#login_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#password_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#service_way_input {
+    max-width: calc(100vw - 258px);
+    width: 558px;
+}
+
+#iservice_name_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#service_function_name_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_uri_name_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+    margin-bottom: 15px;
+}
+
+#rabbit_uri_queue_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_uri_routingkey_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_host_name_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_port_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_virtualhost_name_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_username_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_password_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_queue_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#rabbit_params_routingkey_input {
+    max-width: calc(100vw - 258px);
+    width: 316.9px;
+}
+
+#attributes_execute_operation_div_for_image {
+    height: 21px;
+    width: 21px;
+    background-color: #E8E8E8;
+    float: right;
+}
+
+#attributes_execute_operation_div {
+    border: 1px solid #b5b1b1;
+    margin-bottom: 15px;
+    background-color: #fbfbfb;
+    display: none;
+}
+
+.attributes_execute_operation_table {
+    margin: 20px 20px 20px 20px;
+    background-color: #FFFFFF;
+}
+
+.row {
+    border-bottom: 1px solid #b5b1b1;
+}
+
+.colomn {
+    border-right: 1px solid #b5b1b1;
+    display: table-cell;
+    padding: 2.5px 4px 2px 6px;
+    font-family: Segoe\000020UI;
+    font-size: 12px;
+}
+
+.first_row {
+    border-top: 1px solid #b5b1b1;
+}
+
+.first_colomn {
+    border-left: 1px solid #b5b1b1;
+    border-right: 0px;
+    float: left;
+}
+
+#attributes_execute_operation_button {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 40px;
+    margin-top: 12px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-family: Segoe UI,Tahoma,Arial;
+    border: 1px solid #C6C6C6;
+    width: 65px;
+    float: right;
+    margin: 2px 20px 10px 0px;
+    clear: both;
+}
+
+
+
+.colomn_span {
+    display: block;
+    text-align: left;
+}
+
+.first_colomn {
+    width: 13px;
+    height: 16px;
+}
+
+.second_colomn {
+    width: 400px;
+}
+
+.third_colomn {
+    width: 210px;
+}
+
+.fourth_colomn {
+    width: 90px;
+}
+
+.span_header {
+    text-align: center;
+}
+
+#table_mapping {
+    background: white;
+    font-family: Segoe\000020UI;
+    font-size: 12px;
+    word-wrap: normal;
+    font-weight: normal;
+    cursor: default;
+    font-style: normal;
+    color: #444444;
+    line-height: 16px;
+    margin-left: 24px;
+    margin-top: 22px;
+    border-collapse: collapse;
+    white-space: normal;
+    box-sizing: inherit;
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
+    clear: both;
+}
+
+#table_crm_fields {
+    background: white;
+    font-family: Segoe\000020UI;
+    font-size: 12px;
+    word-wrap: normal;
+    font-weight: normal;
+    cursor: default;
+    font-style: normal;
+    color: #444444;
+    line-height: 16px;
+    margin-left: 24px;
+    margin-top: 22px;
+    border-collapse: collapse;
+    white-space: normal;
+    box-sizing: inherit;
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
+    clear: both;
+}
+
+td {
+    border-right: 1px solid #848282;
+    border-left: 1px solid #848282;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 350px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+tr {
+    border-bottom: 1px solid #848282;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.table_list {
+    margin-left: 0px;
+    border: 0px;
+    width: 350px;
+    padding-bottom: 0px;
+    height: 33px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.table_list_one {
+    margin-left: 0px;
+    border: 0px;
+    padding-bottom: 0px;
+    height: 33px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#entity_attributes_list_one {
+    width: 438px;
+}
+
+.table_option {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+select:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+#div_for_plus_image {
+    margin-bottom: 60px;
+}
+
+#plus_image {
+    border: #c6c6c6 1px solid;
+    float: right;
+    clear: both;
+    margin: 10px calc(100vw - 747.4px) 10px 0px;
+    padding: 1.3px 1.5px 1.1px 1.2px;
+}
+
+#plus_image_crm_fields {
+    border: #c6c6c6 1px solid;
+    float: right;
+    clear: both;
+    margin: -48px calc(100vw - 480px) 10px 0px;
+    padding: 1.3px 1.5px 1.1px 1.2px;
+}

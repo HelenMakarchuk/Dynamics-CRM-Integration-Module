@@ -1,0 +1,149 @@
+﻿<html><head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="new_CRM_Integration_Solution.css" rel="stylesheet" type="text/css">
+    <script src="new_jquery.js" type="text/javascript"></script>
+    <script src="new_CRM_Integration_Solution.js" type="text/javascript"></script>
+
+<meta></head>
+<body style="word-wrap: break-word;">
+    <div class="wrapper">
+        <div class="content">
+            <div class="dialog-Title">Выбор конечной интеграционной точки</div>
+            <div class="div-field" id="configuration_point_field">
+                <select class="list" id="configuration_point_list">
+                    <option disabled="" style="display: none;" selected=""></option>
+                </select>
+            </div>
+            <hr>
+            <div class="dialog-Title">Настройка интеграционных данных</div>
+            <div class="div-field" id="entity_field">
+                <span class="span" id="entity_span">Сущность</span>
+                <select class="list" id="entity_list">
+                    <option disabled="" style="display: none;" selected=""></option>
+                </select>
+            </div>
+            <div class="div-field" id="operation_field">
+                <span class="span" id="operation_span">Операция</span>
+                <select class="list" id="operation_list">
+                    <option disabled="" style="display: none;" selected=""></option>
+                    <option>Create</option>
+                    <option>Update</option>
+                    <option>Delete</option>
+                </select>
+            </div>
+            <!--<div class="div-field" id="attributes_execute_operation_field">
+                <span class="span" id="attributes_execute_operation_span">Поля, вызывающие операцию</span>
+                <input class="input" id="attributes_execute_operation_input">
+                <div id="attributes_execute_operation_div_for_image">
+                    <img class="image" id="attributes_execute_operation_image" src="new_search_normal.gif">
+                </div>
+            </div>
+            <div class="div-field" id="attributes_execute_operation_div" style="display: none; width: 810px; overflow: scroll; height: 280px;">
+                <div class="attributes_execute_operation_table" id="attributes_execute_operation_table">
+                    <div class="row first_row">
+                        <div class="colomn" style="width: 9px; border-right-color: currentColor; border-left-color: rgb(181, 177, 177); border-right-width: 0px; border-left-width: 1px; border-right-style: none; border-left-style: solid;"></div>
+                        <div class="colomn"><span class="colomn_span span_header second_colomn">Отображаемое имя</span></div>
+                        <div class="colomn"><span class="colomn_span span_header third_colomn">Имя</span></div>
+                        <div class="colomn"><span class="colomn_span span_header fourth_colomn">Тип</span></div>
+                    </div>
+                </div>
+                <button id="attributes_execute_operation_button">ОК</button>
+            </div>-->
+            <div class="div-field" id="source_field">
+                <span class="span" id="source_span">Источник данных</span>
+                <select class="list" id="source_list">
+                    <option id="source_list_0" disabled="" style="display: none;" selected=""></option>
+                    <option id="source_list_1">Microsoft SQL Server</option>
+                    <option id="source_list_2">WCF Service</option>
+                    <option id="source_list_3">RabbitMQ</option>
+                    <!--<option id="source_list_4">ORACLE</option>
+                    <option id="source_list_5">MySQL</option>-->
+                </select>
+            </div>
+            <hr>
+            <div id="CustomizeDataSource" class="dialog-Title" style="width: 100%;">Настройка источника данных</div>
+            <hr>
+            <div class="dialog-Title">Настройка маппинга данных</div>
+
+            <div class="div-field" id="execute_test_transfer_status_field" style="display: none">
+                <span class="span" id="execute_test_transfer_status_span">Статус выполнения тестовой передачи данных: С ошибками</span>
+            </div>
+
+            <div class="div-field" id="execute_plugin_field" style="display: none">
+                <span class="span" id="execute_plugin_span">Идентификатор записи</span>
+                <select class="list" id="execute_plugin_list">
+                    <option disabled="" style="display: none;" selected=""></option>
+                </select>
+            </div>
+
+            <table id="table_mapping" style="display: none">
+                <tbody>
+                    <tr style="border-top-color: rgb(132, 130, 130); border-right-color: rgb(132, 130, 130); border-left-color: rgb(132, 130, 130); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid;">
+                        <td style="border-right-color: rgb(132, 130, 130); border-right-width: 1px; border-right-style: solid;">Поля сущности</td>
+                        <td>Поля источника данных</td>
+                    </tr>
+                    <tr>
+                        <td id="entity_attributes_colomn" style="padding-top: 0px; padding-bottom: 0px;">
+                            <select class="list table_list" id="entity_attributes_list" style="height: 26px; padding-left: 3px;">
+                                <option disabled="" class="table_option" style="border: 0px currentColor; border-image: none; display: none;" selected=""></option>
+                            </select>
+                        </td>
+                        <td style="padding-top: 0px; padding-bottom: 0px;">
+                            <select class="list table_list" id="datasource_colomn_list" style="height: 26px; padding-left: 3px;">
+                                <option disabled="" class="table_option" style="border: 0px currentColor; border-image: none; display: none;" selected=""></option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table id="table_crm_fields" style="display: none">
+                <tbody>
+                    <tr style="border-top-color: rgb(132, 130, 130); border-right-color: rgb(132, 130, 130); border-left-color: rgb(132, 130, 130); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid;">
+                        <td style="border-right-color: rgb(132, 130, 130); border-right-width: 1px; border-right-style: solid;">Поля сущности</td>
+                    </tr>
+                    <tr>
+                        <td id="entity_attributes_colomn_one" style="padding-top: 0px; padding-bottom: 0px;">
+                            <select class="list table_list_one" id="entity_attributes_list_one" style="height: 26px; padding-left: 3px;">
+                                <option disabled="" class="table_option" style="border: 0px currentColor; border-image: none; display: none;" selected=""></option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="div_for_plus_image">
+                <img class="image" id="plus_image" src="new_plus.png" style="display: none">
+            </div>
+
+            <div id="div_for_plus_image">
+                <img class="image" id="plus_image_crm_fields" src="new_plus.png" style="display: none">
+            </div>
+
+        </div>
+        <div class="footer">
+            <button class="btn_footer" id="btnCancel" type="button">Отмена</button>
+            <button class="btn_footer" id="btnSave" type="button">Завершение настройки</button>
+        </div>
+    </div>
+
+    <script>
+        $("#entity_list").on("change", function () { Solution.HTML.list_OnChange("entity_list") });
+        $("#entity_attributes_list").on("change", function () { Solution.HTML.list_OnChange("entity_attributes_list") });
+        $("#entity_attributes_list_one").on("change", function () { Solution.HTML.list_OnChange("entity_attributes_list_one") });
+        $("#datasource_colomn_list").on("change", function () { Solution.HTML.list_OnChange("datasource_colomn_list") });
+        $("#source_list").on("change", function () { Solution.HTML.list_OnChange("source_list") });
+        $("#operation_list").on("change", function () { Solution.HTML.list_OnChange("operation_list") });
+        $("#attributes_execute_operation_div_for_image").on("click", function () { Solution.HTML.div_OnClick("attributes_execute_operation_div_for_image") });
+        $("#plus_image").on("click", function () { Solution.HTML.image_OnClick("plus_image") });
+        $("#plus_image_crm_fields").on("click", function () { Solution.HTML.image_OnClick("plus_image_crm_fields") });
+        $("#btnCancel").on("click", function () { Solution.HTML.btn_OnClick("btnCancel") });
+        $("#btnSave").on("click", function () { Solution.HTML.btn_OnClick("btnSave") });
+        $("#attributes_execute_operation_button").on("click", function () { Solution.HTML.btn_OnClick("attributes_execute_operation_button") });
+        $("#btnDBConnectionStr").on("click", function () { Solution.HTML.btn_OnClick("btnDBConnectionStr") });
+        $("#btnDBConnectionGenStr").on("click", function () { Solution.HTML.btn_OnClick("btnDBConnectionGenStr") });
+    </script>
+
+
+</body></html>
