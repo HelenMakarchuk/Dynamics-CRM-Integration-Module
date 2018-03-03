@@ -168,8 +168,6 @@ namespace DevTest.CRM_Integration_Plugins
                         Guid createdLogId = service.Create(log);
                     }
                 }
-
-                //throw new Exception("");
             }
             catch (Exception ex)
             {
@@ -286,8 +284,6 @@ namespace DevTest.CRM_Integration_Plugins
 
                 input = input.Substring(0, input.Length - 1);
                 return input;
-
-                //throw new Exception("");
             }
             catch (Exception ex)
             {
@@ -403,12 +399,8 @@ namespace DevTest.CRM_Integration_Plugins
                     }
                 }
 
-                //throw new Exception(input);
-
                 input = input.Substring(0, input.Length - 1);
                 return input;
-
-                //throw new Exception("");
             }
             catch (Exception ex)
             {
@@ -420,13 +412,10 @@ namespace DevTest.CRM_Integration_Plugins
         {
             try
             {
-                //Calling the Action - new_DatabaseAction
                 OrganizationRequest req = new OrganizationRequest(actionName);
                 req["input"] = input;
                 OrganizationResponse response = service.Execute(req);
                 return response.Results["output"].ToString();
-
-                //throw new Exception("");
             }
             catch (Exception ex)
             {
