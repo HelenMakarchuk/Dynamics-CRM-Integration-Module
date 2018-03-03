@@ -177,8 +177,6 @@ namespace DevTest.CRM_Integration_Plugins
                         }
                     }
                 }
-                
-                //throw new Exception(ex.Message);
             }
             catch (Exception ex)
             {
